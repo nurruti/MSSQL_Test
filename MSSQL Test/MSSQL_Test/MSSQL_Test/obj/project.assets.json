@@ -5985,11 +5985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\Clients\\Infosys\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\MSSQL_Test.csproj",
+      "projectUniqueName": "R:\\Clients\\Infosys\\MSSQL_Test_Repo\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\MSSQL_Test.csproj",
       "projectName": "MSSQL_Test",
-      "projectPath": "R:\\Clients\\Infosys\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\MSSQL_Test.csproj",
+      "projectPath": "R:\\Clients\\Infosys\\MSSQL_Test_Repo\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\MSSQL_Test.csproj",
       "packagesPath": "C:\\Users\\battl\\.nuget\\packages\\",
-      "outputPath": "R:\\Clients\\Infosys\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\obj\\",
+      "outputPath": "R:\\Clients\\Infosys\\MSSQL_Test_Repo\\MSSQL Test\\MSSQL_Test\\MSSQL_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\battl\\AppData\\Roaming\\NuGet\\NuGet.Config",
