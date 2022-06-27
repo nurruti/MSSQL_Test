@@ -7,9 +7,9 @@ namespace MSSQL_Test.Models
 {
     public partial class Employee
     {
-        public int EmpId { get; set; }
-        public string EmpFirstName { get; set; }
-        public string EmpLastName { get; set; }
-        public int? EmpAge { get; set; }
+        public int empId { get; set; }
+        public string empFirstName { get; set; }
+        public string empLastName { get; set; }
+        public int? empAge { get; set; }
     }
 }

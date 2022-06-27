@@ -33,19 +33,19 @@ namespace MSSQL_Test.Models
 
             modelBuilder.Entity<Employee>(entity =>
             {
-                entity.HasKey(e => e.EmpId)
+                entity.HasKey(e => e.empId)
                     .HasName("PK__Employee__AFB3EC6DFCC571FB");
 
-                entity.Property(e => e.EmpId).HasColumnName("empID");
+                entity.Property(e => e.empId).HasColumnName("empID");
 
-                entity.Property(e => e.EmpAge).HasColumnName("empAge");
+                entity.Property(e => e.empAge).HasColumnName("empAge");
 
-                entity.Property(e => e.EmpFirstName)
+                entity.Property(e => e.empFirstName)
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("empFirstName");
 
-                entity.Property(e => e.EmpLastName)
+                entity.Property(e => e.empLastName)
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("empLastName");

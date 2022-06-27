@@ -1,0 +1,15 @@
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.csproj.AssemblyReference.cache
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.GeneratedMSBuildEditorConfig.editorconfig
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.AssemblyInfoInputs.cache
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.AssemblyInfo.cs
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.csproj.CoreCompileInputs.cache
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\bin\Debug\net5.0\Data_Access_Layer.deps.json
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\bin\Debug\net5.0\Data_Access_Layer.runtimeconfig.json
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\bin\Debug\net5.0\Data_Access_Layer.runtimeconfig.dev.json
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\bin\Debug\net5.0\Data_Access_Layer.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\bin\Debug\net5.0\Data_Access_Layer.pdb
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\refint\Data_Access_Layer.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.pdb
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\Data_Access_Layer.genruntimeconfig.cache
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\Data_Access_Layer\obj\Debug\net5.0\ref\Data_Access_Layer.dll
