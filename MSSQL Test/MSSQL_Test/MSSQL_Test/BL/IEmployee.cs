@@ -1,19 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
 using MSSQL_Test.Models;
+using System.Collections.Generic;
 
 namespace MSSQL_Test.BL
 {
     public interface IEmployee
     {
-        IActionResult GetEmployees();
+        List<EmployeeModel> GetEmployees();
 
-        IActionResult SearchEmployee(int id);
+        EmployeeModel SearchEmployee(int id);
 
-        IActionResult CreateEmployee(string fName, string lName, int age);
+        EmployeeModel CreateEmployee(EmployeeModel employeeModel);
 
-        IActionResult UpdateEmployee(int id, EmployeeModel employee);
+        bool UpdateEmployee(int id, EmployeeModel employee);
 
-        IActionResult DeleteEmployee(int id);    
+        bool DeleteEmployee(int id);    
 
     }
 }

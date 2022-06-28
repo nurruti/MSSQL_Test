@@ -4,123 +4,99 @@ using Microsoft.AspNetCore.Mvc;
 using MSSQL_Test.Models;
 using System.Linq;
 using MSSQL_Test.DAL;
+using System.Collections.Generic;
 
 namespace MSSQL_Test.BL
 {
-    public class Employee : Controller, IEmployee //Or ControllerBase, Unsure 
+    public class Employee :  IEmployee 
     {
         #region Get Employees
-        public IActionResult GetEmployees()
+        public List<EmployeeModel> GetEmployees()
         {
             var dbEmployee = new EmployeeDBContext();
-            var empList = from e in dbEmployee.Employees
-                          select e;
+            var empList = (from e in dbEmployee.Employees
+                          select e).ToList();
 
-            return Ok(empList);
+            return empList;
         }
         #endregion
 
         #region Search Employees by ID
-        public IActionResult SearchEmployee(int id)
+        public EmployeeModel SearchEmployee(int id)
         {
             var dbEmployee = new EmployeeDBContext();
-            try
+            var searchResult = (from e in dbEmployee.Employees
+                                where e.empId == id
+                                select e).SingleOrDefault(); 
+            if (searchResult == null)
             {
-                var searchResult = from e in dbEmployee.Employees
-                                   where e.empId == id
-                                   select e;
-                if (searchResult != null)
-                {
-                    return Ok(searchResult);
-                }
-                else
-                {
-                    return BadRequest("Could not find employee with that ID");
-                }
+                return (null); 
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            return ((EmployeeModel)searchResult); 
         }
         #endregion
 
-        #region Add an Employee
-        public IActionResult CreateEmployee(string fName, string lName, int age)
+        #region Create an Employee
+        public EmployeeModel CreateEmployee(EmployeeModel employeeModel)
         {
             var dbEmployee = new EmployeeDBContext();
 
             var newEmployee = new EmployeeModel();
 
-            newEmployee.empFirstName = fName;
-            newEmployee.empLastName = lName;
-            newEmployee.empAge = age;
-
-
-            if (newEmployee != null)
+            if (employeeModel != null)
             {
+                newEmployee.empFirstName = employeeModel.empFirstName;
+                newEmployee.empLastName = employeeModel.empLastName;
+                newEmployee.empAge = employeeModel.empAge;
+                
                 dbEmployee.Employees.Add(newEmployee);
                 dbEmployee.SaveChanges();
 
-                return Created("", newEmployee);
+                return newEmployee;
             }
-            else
-            {
-                return BadRequest("Error: Could not make new Employee");
-            }
+
+            return null;
         }
         #endregion
 
         #region Update Employee
-        public IActionResult UpdateEmployee(int id, EmployeeModel employee)
+        public bool UpdateEmployee(int id, EmployeeModel employee)
         {
             var dbEmployee = new EmployeeDBContext();
-            try
-            {
                 var searchResult = (from e in dbEmployee.Employees
                                     where e.empId == id
                                     select e).SingleOrDefault();
-                if (searchResult != null)
+                if (searchResult == null)
                 {
-                    searchResult.empFirstName = employee.empFirstName;
-                    searchResult.empLastName = employee.empLastName;
-                    searchResult.empAge = employee.empAge;
-
-                    dbEmployee.SaveChanges();
+                    return false;
                 }
-                else
-                {
-                    return BadRequest("Could not find employee with that ID");
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                
+                searchResult.empFirstName = employee.empFirstName;
+                searchResult.empLastName = employee.empLastName;
+                searchResult.empAge = employee.empAge;
 
-            return Ok("Employee updated");
+                dbEmployee.SaveChanges();
+                return true;
         }
         #endregion
 
         #region Delete Employee
-        public IActionResult DeleteEmployee(int empID)
+        public bool DeleteEmployee(int id)
         {
             var dbEmployee = new EmployeeDBContext();
 
             var emp = (from e in dbEmployee.Employees
-                       where e.empId == empID
+                       where e.empId == id
                        select e).SingleOrDefault();
-
-            if (emp != null)
+            if (emp == null)
             {
+                return false;
+            }
+            
                 dbEmployee.Employees.Remove(emp);
                 dbEmployee.SaveChanges();
-                return Ok("Employee deleted.");
-            }
-            else
-            {
-                return BadRequest("Invalid Employee ID.");
-            }
+            return true;
         }
         #endregion
     }

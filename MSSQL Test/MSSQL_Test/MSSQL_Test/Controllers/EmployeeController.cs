@@ -8,7 +8,7 @@ namespace EmployeeAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController
+    public class EmployeeController : ControllerBase
     {
         private Employee _BL;
         public EmployeeController()
@@ -19,45 +19,63 @@ namespace EmployeeAPI.Controllers
         #region Get Employees
         [HttpGet]
         [Route("")]
-        public IActionResult GetEmployees()
+        public IActionResult GetEmployees() 
         {
-            return _BL.GetEmployees();
+            return Ok(_BL.GetEmployees());
         }
         #endregion
         
         #region Search Employees
         [HttpGet]
         [Route("{empID:int}")]
-        public IActionResult SearchEmployee(int id)
+        public IActionResult SearchEmployee(int id) 
         {
-            return _BL.SearchEmployee(id);
+            if (_BL.SearchEmployee(id) == null)
+            {
+                return BadRequest("Could not find employee with that ID");
+            }
+            return Ok(_BL.SearchEmployee(id)); 
         }
         #endregion
         
-        #region Add Employee
+        #region Create Employee
         [HttpPost]
         [Route("")]
-        public IActionResult CreateEmployee(string fName, string lName, int age)
+        public IActionResult CreateEmployee(EmployeeModel employeeModel) 
         {
-            return _BL.CreateEmployee(fName, lName, age);
+            if (employeeModel == null)
+            {
+                return BadRequest("Error: Could not make new Employee");
+            }
+
+            _BL.CreateEmployee(employeeModel);
+            return Ok("Employee Created");
         }
         #endregion
       
         #region Update Employee
         [HttpPut]
         [Route("{empID:int}")]
-        public IActionResult UpdateEmployee(int id, EmployeeModel employee)
+        public IActionResult UpdateEmployee(int id, EmployeeModel employee) 
         {
-            return _BL.UpdateEmployee(id, employee);
+            if(_BL.UpdateEmployee(id, employee) == false)
+            {
+                return BadRequest("Error: Could not make new Employee");
+            }
+            return Ok("Employee Updated"); 
         }
         #endregion
         
         #region Delete Employee
         [HttpDelete]
         [Route("{empID:int}")]
-        public IActionResult DeleteEmployee(int empID)
+        public IActionResult DeleteEmployee(int empID) 
         {
-            return _BL.DeleteEmployee(empID);
+            if(_BL.DeleteEmployee(empID) == false)
+            {
+                return BadRequest("Invalid Employee ID.");
+            }
+            return Ok("Employee has been deleted");
         }
         #endregion
     }
