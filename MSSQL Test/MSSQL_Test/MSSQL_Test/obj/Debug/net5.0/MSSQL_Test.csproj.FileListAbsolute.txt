@@ -100,10 +100,6 @@ R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\ne
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Business_Logic_Layer.dll
-R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Data_Access_Layer.dll
-R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Business_Logic_Layer.pdb
-R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Data_Access_Layer.pdb
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\MSSQL_Test.csproj.AssemblyReference.cache
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\MSSQL_Test.GeneratedMSBuildEditorConfig.editorconfig
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\MSSQL_Test.AssemblyInfoInputs.cache
@@ -120,3 +116,5 @@ R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\ne
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\MSSQL_Test.pdb
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\MSSQL_Test.genruntimeconfig.cache
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\ref\MSSQL_Test.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Humanizer.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

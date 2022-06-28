@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MSSQL_Test.Entities;
+using MSSQL_Test.BL;
+using MSSQL_Test.Models;
 using System;
 
 namespace EmployeeAPI.Controllers
@@ -9,10 +10,10 @@ namespace EmployeeAPI.Controllers
     [ApiController]
     public class EmployeeController
     {
-        private Business_Logic_Layer.EmployeeBL _BL;
+        private Employee _BL;
         public EmployeeController()
         {
-            _BL = new Business_Logic_Layer.EmployeeBL();
+            _BL = new Employee();
         }
 
         #region Get Employees
@@ -45,7 +46,7 @@ namespace EmployeeAPI.Controllers
         #region Update Employee
         [HttpPut]
         [Route("{empID:int}")]
-        public IActionResult UpdateEmployee(int id, Employee employee)
+        public IActionResult UpdateEmployee(int id, EmployeeModel employee)
         {
             return _BL.UpdateEmployee(id, employee);
         }
