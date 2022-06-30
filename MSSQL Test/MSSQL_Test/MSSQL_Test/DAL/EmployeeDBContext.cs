@@ -24,7 +24,8 @@ namespace MSSQL_Test.DAL
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source = DESKTOP-2LDPKO5\\NICHOLASINSTANCE; Initial Catalog=MSSQL_Test; Integrated Security=True");
+                //optionsBuilder.UseSqlServer("Data Source = DESKTOP-2LDPKO5\\NICHOLASINSTANCE; Initial Catalog=MSSQL_Test; Integrated Security=True");
+                optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=EmployeeDB;User Id=postgres;Password=Pikachu25;");
             }
         }
 

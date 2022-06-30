@@ -86,9 +86,13 @@ namespace MSSQL_Test.BL
         {
             var dbEmployee = new EmployeeDBContext();
 
+            //int tempInt;
+            //bool isInt = int.TryParse(id, out tempInt);
+
             var emp = (from e in dbEmployee.Employees
                        where e.empId == id
                        select e).SingleOrDefault();
+
             if (emp == null)
             {
                 return false;

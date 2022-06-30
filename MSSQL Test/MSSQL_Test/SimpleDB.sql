@@ -4,10 +4,12 @@ Drop TABLE Employees;
 
 CREATE TABLE Employees(
 	empID integer PRIMARY KEY Identity(101, 1),
-	empFirstName varchar(30),
-	empLastName varchar(30),
-	empAge integer
+	empFirstName varchar(30) NOT NULL,
+	empLastName varchar(30) NOT NULL,
+	empAge integer NOT NULL
 )
+
+--DBCC CHECKIDENT ('[Employees]', RESEED, 106);
 
 Select * from Employees;
 

@@ -118,3 +118,5 @@ R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\ne
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\obj\Debug\net5.0\ref\MSSQL_Test.dll
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Humanizer.dll
 R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Npgsql.dll
+R:\Clients\Infosys\MSSQL_Test_Repo\MSSQL Test\MSSQL_Test\MSSQL_Test\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
