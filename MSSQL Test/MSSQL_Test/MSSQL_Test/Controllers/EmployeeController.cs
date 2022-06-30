@@ -43,12 +43,11 @@ namespace EmployeeAPI.Controllers
         [Route("")]
         public IActionResult CreateEmployee(EmployeeModel employeeModel) 
         {
-            if (employeeModel == null)
+            if (_BL.CreateEmployee(employeeModel) == false)
             {
                 return BadRequest("Error: Could not make new Employee");
             }
 
-            _BL.CreateEmployee(employeeModel);
             return Ok("Employee Created");
         }
         #endregion

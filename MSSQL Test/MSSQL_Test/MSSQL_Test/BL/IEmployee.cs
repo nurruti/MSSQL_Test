@@ -10,7 +10,7 @@ namespace MSSQL_Test.BL
 
         EmployeeModel SearchEmployee(int id);
 
-        EmployeeModel CreateEmployee(EmployeeModel employeeModel);
+        bool CreateEmployee(EmployeeModel employeeModel);
 
         bool UpdateEmployee(int id, EmployeeModel employee);
 

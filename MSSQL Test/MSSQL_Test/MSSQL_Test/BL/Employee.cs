@@ -24,6 +24,10 @@ namespace MSSQL_Test.BL
         #region Search Employees by ID
         public EmployeeModel SearchEmployee(int id)
         {
+            if (Validation.CheckInt(id.ToString()) == false)
+            {
+                return null;
+            };
             var dbEmployee = new EmployeeDBContext();
             var searchResult = (from e in dbEmployee.Employees
                                 where e.empId == id
@@ -38,11 +42,21 @@ namespace MSSQL_Test.BL
         #endregion
 
         #region Create an Employee
-        public EmployeeModel CreateEmployee(EmployeeModel employeeModel)
+        public bool CreateEmployee(EmployeeModel employeeModel)
         {
             var dbEmployee = new EmployeeDBContext();
 
             var newEmployee = new EmployeeModel();
+
+            if (Validation.CheckString(employeeModel.empFirstName) == false || Validation.CheckString(employeeModel.empLastName) == false)
+            {
+                return false;
+            }
+
+            if (Validation.CheckAge(employeeModel.empAge.ToString()) == false)
+            {
+                return false;
+            }
 
             if (employeeModel != null)
             {
@@ -53,16 +67,29 @@ namespace MSSQL_Test.BL
                 dbEmployee.Employees.Add(newEmployee);
                 dbEmployee.SaveChanges();
 
-                return newEmployee;
+                return true;
             }
 
-            return null;
+            return false;
         }
         #endregion
 
         #region Update Employee
         public bool UpdateEmployee(int id, EmployeeModel employee)
         {
+            if (Validation.CheckInt(id.ToString()) == false)
+            {
+                return false;
+            };
+            if (Validation.CheckString(employee.empFirstName) == false || Validation.CheckString(employee.empLastName) == false)
+            {
+                return false;
+            }
+
+            if (Validation.CheckAge(employee.empAge.ToString()) == false)
+            {
+                return false;
+            }
             var dbEmployee = new EmployeeDBContext();
                 var searchResult = (from e in dbEmployee.Employees
                                     where e.empId == id
@@ -86,8 +113,10 @@ namespace MSSQL_Test.BL
         {
             var dbEmployee = new EmployeeDBContext();
 
-            //int tempInt;
-            //bool isInt = int.TryParse(id, out tempInt);
+            if (Validation.CheckInt(id.ToString()) == false)
+            {
+                return false;
+            };
 
             var emp = (from e in dbEmployee.Employees
                        where e.empId == id
